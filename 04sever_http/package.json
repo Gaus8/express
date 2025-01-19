@@ -1,0 +1,30 @@
+{
+  "name": "04curso_midu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "rules": {
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-multiple-empty-lines":"off"
+      
+    }
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

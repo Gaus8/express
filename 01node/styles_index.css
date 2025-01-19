@@ -1,0 +1,224 @@
+/*TIPO DE LETRA ROBOTO IMPORTADA DE GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+:root{
+    --color-verde:#129e29;
+    --color-blanco:#FFF;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/fondo_universidad.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+   
+}
+body::before{
+    background-image: url('fondo_universidad.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+    opacity: 0.8;
+}
+
+
+/*ELEMENTOS PRINCIPALES*/
+.container{
+    width:50vw;
+    height:60vh  ;
+    border: 2px solid rgb(196, 193, 193);
+    min-width: 700px;
+    min-height: 400px;
+    display: flex;
+    position: relative;
+    border-radius: 6px;
+    background-color: var(--color-blanco);
+
+}
+
+.form-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+form h2{    
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+span{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-between;
+    gap:25px;
+    align-items: center;
+   
+}
+
+.logos img{
+    width: 35px;
+    border: 1px solid #b8b7b7; 
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+.logos ion-icon{
+    font-size: 30px;
+    border: 1px solid #b8b7b7; 
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.container-input{
+    width: 70%;
+    height: 8%;
+    margin-top: 10px;   
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 15px;
+    gap:8px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.form-container a{
+    color: rgb(75, 75, 75);
+    margin: 15px auto;
+}
+/*BOTONES*/
+.btn{
+    width: 235px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color:var(--color-blanco);
+    color: var(--color-verde);
+    cursor: pointer;
+}
+
+.btn-principal:hover{
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  transition: 0.5s ease-in-out;
+}
+
+
+/*ANIMACION-*/
+.input-registro{
+    transform:translateX(-100%);
+}
+
+.container.toggle .input-login{
+    transform:translateX(100%);
+}
+.container.toggle .input-registro{
+    transform:translateX(0);
+}
+
+/*ANIMACION ELEMENTO SECUNDARIO*/
+
+.container-welcome{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color:var(--color-verde);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out,border-radius 0.5s ease-in-out  ;
+    border-radius: 2% 0 0 50% ;
+}
+
+.container-welcome .welcome{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding:0 50px;
+    color: var(--color-blanco);
+    transition: transform 0.5s ease-in-out;
+}
+
+.welcome-login{
+    transform: translateX(100%);
+}
+
+.container-welcome h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.container-welcome p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.container-welcome .btn{
+    border: 2px solid var(--color-blanco);
+    color:var(--color-blanco);
+    background-color: var(--color-verde);
+}
+
+.container-welcome .btn:hover{
+   border-top: none;
+   border-right:none ;
+}
+
+.container-welcome .welcome-registro{
+    transform: translateX(0);
+}
+
+.container.toggle .container-welcome{
+    transform: translateX(0);
+    border-radius: 0 2% 50% 0;
+}
+
+.container.container.toggle .welcome-login{
+    transform: translateX(0);
+}
+
+.container.container.toggle .welcome-registro{
+    transform: translateX(-100%);
+}
